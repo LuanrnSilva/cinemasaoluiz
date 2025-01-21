@@ -12,7 +12,9 @@
 	<artifactId>cinemasaoluiz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cinemasaoluiz</name>
-	<description>Demo project for Spring Boot</description>
+	<description>A system for managing ticket sales, movie information, showtimes,
+		and session availability for Cinema São Luiz, aimed at streamlining
+		operations and enhancing the user experience.</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -58,6 +60,11 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.12.1</version>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
