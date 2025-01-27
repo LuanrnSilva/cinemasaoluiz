@@ -1,10 +1,19 @@
-package br.com.luandev.cinemasaoluiz.dto;
+package br.com.luandev.cinemasaoluiz.entities;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ProductionCompany {
 
+    @JsonProperty("id")
     private Long id;
+
+    @JsonProperty("logo_path")
     private String logo_path;
+
+    @JsonProperty("name")
     private String name;
+
+    @JsonProperty("origin_country")
     private String origin_country;
 
     public ProductionCompany() {

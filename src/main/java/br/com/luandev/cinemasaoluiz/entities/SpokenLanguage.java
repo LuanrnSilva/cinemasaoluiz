@@ -1,9 +1,16 @@
-package br.com.luandev.cinemasaoluiz.dto;
+package br.com.luandev.cinemasaoluiz.entities;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SpokenLanguage {
 
+    @JsonProperty("english_name")
     private String english_name;
+
+    @JsonProperty("iso_639_1")
     private String iso_639_1;
+
+    @JsonProperty("name")
     private String name;
 
     public SpokenLanguage() {

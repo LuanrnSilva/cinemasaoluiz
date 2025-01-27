@@ -1,8 +1,13 @@
-package br.com.luandev.cinemasaoluiz.dto;
+package br.com.luandev.cinemasaoluiz.entities;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Genre {
 
+    @JsonProperty("id")
     private Long id;
+
+    @JsonProperty("name")
     private String name;
 
     public Genre() {

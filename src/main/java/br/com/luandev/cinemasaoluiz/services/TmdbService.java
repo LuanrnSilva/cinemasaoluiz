@@ -1,6 +1,6 @@
 package br.com.luandev.cinemasaoluiz.services;
 
-import br.com.luandev.cinemasaoluiz.dto.TmdbDTO;
+import br.com.luandev.cinemasaoluiz.entities.Tmdb;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -9,14 +9,16 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class TmdbService {
 
-    @Value("${tmdb.api.key}")
-    private String apiKey;
+    @Value("${tmdb.api.last.url}")
+    private String lastUrl;
 
+    @Value("${tmdb.api.url}")
+    private String apiUrl;
 
-    public TmdbDTO consultaTmdb(String id) {
-        String url = "https://api.themoviedb.org/3/movie/"+ id + "?api_key=" + apiKey + "&language=pt-BR";
+    public Tmdb consultaTmdb(String id) {
+        String url = apiUrl + id + lastUrl;
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<TmdbDTO> tmdbDTO = restTemplate.getForEntity(url, TmdbDTO.class);
-        return tmdbDTO.getBody();
+        ResponseEntity<Tmdb> tmdb = restTemplate.getForEntity(url, Tmdb.class);
+        return tmdb.getBody();
     }
 }

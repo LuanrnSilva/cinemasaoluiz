@@ -1,10 +1,19 @@
-package br.com.luandev.cinemasaoluiz.dto;
+package br.com.luandev.cinemasaoluiz.entities;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Collection {
 
+    @JsonProperty("id")
     private Long id;
+
+    @JsonProperty("name")
     private String name;
+
+    @JsonProperty("poster_path")
     private String poster_path;
+
+    @JsonProperty("backdrop_path")
     private String backdrop_path;
 
     public Collection() {

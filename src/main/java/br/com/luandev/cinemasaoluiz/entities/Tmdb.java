@@ -1,67 +1,88 @@
-package br.com.luandev.cinemasaoluiz.dto;
+package br.com.luandev.cinemasaoluiz.entities;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-public class TmdbDTO {
+public class Tmdb {
 
+    @JsonProperty("adult")
     private boolean adult;
+
+    @JsonProperty("backdrop_path")
     private String backdropPath;
+
+    @JsonProperty("belongs_to_collection")
     private Collection belongsToCollection;
+
+    @JsonProperty("budget")
     private long budget;
+
+    @JsonProperty("genres")
     private List<Genre> genres;
+
+    @JsonProperty("homepage")
     private String homepage;
+
+    @JsonProperty("id")
     private int id;
+
+    @JsonProperty("imdb_id")
     private String imdbId;
+
+    @JsonProperty("origin_country")
     private List<String> originCountry;
+
+    @JsonProperty("original_language")
     private String originalLanguage;
+
+    @JsonProperty("original_title")
     private String originalTitle;
+
+    @JsonProperty("overview")
     private String overview;
+
+    @JsonProperty("popularity")
     private double popularity;
+
+    @JsonProperty("poster_path")
     private String posterPath;
+
+    @JsonProperty("production_companies")
     private List<ProductionCompany> productionCompanies;
+
+    @JsonProperty("production_countries")
     private List<ProductionCountry> productionCountries;
+
+    @JsonProperty("release_date")
     private String releaseDate;
+
+    @JsonProperty("revenue")
     private long revenue;
+
+    @JsonProperty("runtime")
     private int runtime;
+
+    @JsonProperty("spoken_languages")
     private List<SpokenLanguage> spokenLanguages;
+
+    @JsonProperty("status")
     private String status;
+
+    @JsonProperty("tagline")
     private String tagline;
+
+    @JsonProperty("title")
     private String title;
+
+    @JsonProperty("video")
     private boolean video;
+
+    @JsonProperty("vote_average")
     private double voteAverage;
+
+    @JsonProperty("vote_count")
     private int voteCount;
-
-    public TmdbDTO() {
-    }
-
-    public TmdbDTO(boolean adult, String backdropPath, Collection belongsToCollection, long budget, List<Genre> genres, String homepage, int id, String imdbId, List<String> originCountry, String originalLanguage, String originalTitle, String overview, double popularity, String posterPath, List<ProductionCompany> productionCompanies, List<ProductionCountry> productionCountries, String releaseDate, long revenue, int runtime, List<SpokenLanguage> spokenLanguages, String status, String tagline, String title, boolean video, double voteAverage, int voteCount) {
-        this.adult = adult;
-        this.backdropPath = backdropPath;
-        this.belongsToCollection = belongsToCollection;
-        this.budget = budget;
-        this.genres = genres;
-        this.homepage = homepage;
-        this.id = id;
-        this.imdbId = imdbId;
-        this.originCountry = originCountry;
-        this.originalLanguage = originalLanguage;
-        this.originalTitle = originalTitle;
-        this.overview = overview;
-        this.popularity = popularity;
-        this.posterPath = posterPath;
-        this.productionCompanies = productionCompanies;
-        this.productionCountries = productionCountries;
-        this.releaseDate = releaseDate;
-        this.revenue = revenue;
-        this.runtime = runtime;
-        this.spokenLanguages = spokenLanguages;
-        this.status = status;
-        this.tagline = tagline;
-        this.title = title;
-        this.video = video;
-        this.voteAverage = voteAverage;
-        this.voteCount = voteCount;
-    }
 
     public boolean isAdult() {
         return adult;

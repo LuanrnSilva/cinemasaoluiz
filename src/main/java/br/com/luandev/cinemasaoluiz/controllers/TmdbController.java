@@ -1,6 +1,6 @@
 package br.com.luandev.cinemasaoluiz.controllers;
 
-import br.com.luandev.cinemasaoluiz.dto.TmdbDTO;
+import br.com.luandev.cinemasaoluiz.entities.Tmdb;
 import br.com.luandev.cinemasaoluiz.services.TmdbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ public class TmdbController {
     private TmdbService tmdbService;
 
     @GetMapping("/consulta/{id}")
-    public ResponseEntity<TmdbDTO> consultaTmdb(@PathVariable  String id) {
+    public ResponseEntity<Tmdb> consultaTmdb(@PathVariable  String id) {
         return ResponseEntity.ok(tmdbService.consultaTmdb(id));
     }
 
